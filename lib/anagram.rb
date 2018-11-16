@@ -1,8 +1,7 @@
 class Gram_Storage
-  attr_reader(:word_one, :word_two, :is_anagram)
   def initialize(word_one, word_two)
-    @word_one = word_one
-    @word_two = word_two
+    @word_one = word_one.downcase
+    @word_two = word_two.downcase
   end
   def check_status
     if(@word_one.length != @word_two.length)
