@@ -4,8 +4,9 @@ class Gram_Storage
     @word_two = word_two.downcase
   end
   def check_status
+    anagram = true
     if(@word_one.length != @word_two.length)
-      return false
+      anagram = false
     else
       temp_word_one = @word_one
       temp_word_two = @word_two
@@ -14,12 +15,24 @@ class Gram_Storage
         temp_word_one = temp_word_one[1..-1]
         location = temp_word_two.index(letter)
         if(!location)
-          return false
+          anagram = false
+          break
         end
         temp_word_two = temp_word_two[0,location] + temp_word_two[location+1..-1]
       end
     end
-    return true
+    if anagram
+      return "anagrams."
+    else
+      index = 0
+      while index < @word_one.length
+        if @word_two.include?(@word_one[index])
+          return "neither."
+        end
+        index += 1
+      end
+      return "antigrams."
+    end
   end
 end
 
@@ -29,7 +42,7 @@ def anagram(word_one, word_two)
   end
   storage = Gram_Storage.new(word_one, word_two)
   return_string = "#{word_one} and #{word_two} are "
-  return_string += (storage.check_status ? "anagrams." : "not anagrams.")
+  return_string += storage.check_status
 end
 
 def is_word(word)

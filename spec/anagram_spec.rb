@@ -3,7 +3,7 @@ require 'anagram'
 
 describe('anagram') do
   it('will return not an anagram if two words are not anagrams') do
-    expect(anagram("ruby", "desk")).to(eq("ruby and desk are not anagrams."))
+    expect(anagram("ruby", "rest")).to(eq("ruby and rest are neither."))
   end
   it('will take two words and check if they are anagrams') do
     expect(anagram("ruby", "bury")).to(eq("ruby and bury are anagrams."))
