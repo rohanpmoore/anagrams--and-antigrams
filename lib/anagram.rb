@@ -24,6 +24,9 @@ class Gram_Storage
 end
 
 def anagram(word_one, word_two)
+  if(!is_word(word_one) | !is_word(word_two))
+    return "one or more inputs are not words."
+  end
   storage = Gram_Storage.new(word_one, word_two)
   return_string = "#{word_one} and #{word_two} are "
   return_string += (storage.check_status ? "anagrams." : "not anagrams.")
