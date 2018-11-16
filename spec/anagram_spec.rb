@@ -5,4 +5,7 @@ describe('anagram') do
   it('will take two words and check if they are anagrams') do
     expect(anagram("ruby", "bury")).to(eq("ruby and bury are anagrams."))
   end
+  it('will take two words and check if they are anagrams, ignoring case') do
+    expect(anagram("resTFUL", "FLUster")).to(eq("resTFUL and FLUster are anagrams."))
+  end
 end
