@@ -14,4 +14,7 @@ describe('anagram') do
   it('will tell you if you did not input a real word') do
     expect(anagram("ruby", "brrt")).to(eq("one or more inputs are not words."))
   end
+  it('will tell the user if the words are antigrams') do
+    expect(anagram("ruby", "dog")).to(eq("ruby and dog are antigrams."))
+  end
 end
