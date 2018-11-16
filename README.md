@@ -23,7 +23,7 @@ _If you discover a bug or want to make a suggestion or comment, send me an email
 
 ## Technologies Used
 
-_This project uses Ruby._
+_This project uses Ruby, HTML, and CSS._
 
 ### License
 

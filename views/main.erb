@@ -4,16 +4,23 @@
     <meta charset="utf-8">
     <title>Anagrams</title>
     <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'>
+    <link rel="stylesheet" href="css/styles.css">
   </head>
   <body>
     <div class="container">
-      <h1 class="jumbotron">Anagrams and Antigrams</h1>
+      <div class="jumbotron">
+        <h1>Anagrams and Antigrams</h1>
+      </div>
       <h3><%= @description %></h3>
       <form action="/output">
-        <label for="word-one">Enter the first word or phrase:</label>
-        <input type="text" name="word-one" id="w1">
-        <label for="word-two">Enter the second word or phrase:</label>
-        <input type="text" name="word-two" id="w2">
+        <div class="form-group">
+          <label for="word-one">Enter the first word or phrase:</label>
+          <input type="text" name="word-one" id="w1" class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="word-two">Enter the second word or phrase:</label>
+          <input type="text" name="word-two" id="w2" class="form-control">
+        </div>
         <button type="submit">What's their relation?</button>
       </form>
     </div>
