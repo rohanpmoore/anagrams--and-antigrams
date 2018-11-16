@@ -18,6 +18,6 @@ describe('anagram') do
     expect(anagram("ruby", "dog")).to(eq("ruby and dog are antigrams."))
   end
   it('will correctly identify anagrams of multiple words') do
-    expect(anagram("rail safety", "fairy tails")).to(eq("rail safety and fairy tails are anagrams."))
+    expect(anagram("rail safety", "fairy tales")).to(eq("rail safety and fairy tales are anagrams."))
   end
 end
