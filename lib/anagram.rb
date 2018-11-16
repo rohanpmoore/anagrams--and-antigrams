@@ -35,7 +35,7 @@ class Gram_Storage
       index = 0
       while index < @word_one.length
         if @word_two.include?(@word_one[index])
-          return "neither."
+          return "neither an anagram nor an antigram."
         end
         index += 1
       end
