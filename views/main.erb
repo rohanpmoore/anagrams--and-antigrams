@@ -9,7 +9,12 @@
     <div class="container">
       <h1 class="jumbotron">Anagrams and Antigrams</h1>
       <h3><%= @description %></h3>
-      <form action="/output" method="post">
+      <form action="/output">
+        <label for="word-one">Enter the first word or phrase:</label>
+        <input type="text" name="word-one" id="w1">
+        <label for="word-two">Enter the second word or phrase:</label>
+        <input type="text" name="word-two" id="w2">
+        <button type="submit">What's their relation?</button>
       </form>
     </div>
   </body>
