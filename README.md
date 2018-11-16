@@ -11,6 +11,7 @@ _This site can take multiple words or sentences as return if they are anigrams o
 ## Setup/Installation Instructions
 
 1. _Clone this project from its [Github repository](https://github.com/rohanpmoore/anagrams--and-antigrams)._
+2. _In a terminal, move to the project directory and run the command "$ruby main.rb"_
 
 ## Known Bugs
 
