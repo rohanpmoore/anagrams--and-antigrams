@@ -20,6 +20,7 @@ class Gram_Storage
         temp_word_two = temp_word_two[0,location] + temp_word_two[location+1..-1]
       end
     end
+    return true
   end
 end
 
