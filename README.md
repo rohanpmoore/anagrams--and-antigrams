@@ -10,7 +10,7 @@ _This site can take multiple words or sentences as return if they are anigrams o
 
 ## Setup/Installation Instructions
 
-1. _Clone this project from its [Github repository](https://github.com/rohanpmoore/anagrams-and-antigrams)._
+1. _Clone this project from its [Github repository](https://github.com/rohanpmoore/anagrams--and-antigrams)._
 
 ## Known Bugs
 
