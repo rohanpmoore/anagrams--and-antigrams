@@ -17,4 +17,7 @@ describe('anagram') do
   it('will tell the user if the words are antigrams') do
     expect(anagram("ruby", "dog")).to(eq("ruby and dog are antigrams."))
   end
+  it('will correctly identify anagrams of multiple words') do
+    expect(anagram("rail safety", "fairy tails")).to(eq("rail safety and fairy tails are anagrams."))
+  end
 end

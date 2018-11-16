@@ -1,7 +1,15 @@
 class Gram_Storage
   def initialize(word_one, word_two)
-    @word_one = word_one.downcase
-    @word_two = word_two.downcase
+    @word_one = purge_characters(word_one)
+    @word_two = purge_characters(word_two)
+  end
+  def purge_characters(word)
+    remove_characters = [" ", ",", ".", "?", "!"]
+    letters = word.chars
+    remove_characters.each() do |character|
+      letters.delete(character)
+    end
+    return (letters.join).downcase
   end
   def check_status
     anagram = true
@@ -37,8 +45,12 @@ class Gram_Storage
 end
 
 def anagram(word_one, word_two)
-  if(!is_word(word_one) | !is_word(word_two))
-    return "one or more inputs are not words."
+  combo_word = "#{word_one} #{word_two}"
+  words = combo_word.split(" ")
+  words.each() do |word|
+    if !is_word(word)
+      return "one or more inputs are not words."
+    end
   end
   storage = Gram_Storage.new(word_one, word_two)
   return_string = "#{word_one} and #{word_two} are "
